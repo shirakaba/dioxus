@@ -1,0 +1,26 @@
+[package]
+name = "appkit"
+version = "0.2.0"
+edition = "2021"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/DioxusLabs/dioxus/"
+homepage = "https://dioxuslabs.com"
+description = "Dioxus VirtualDOM renderer for AppKit using cacao"
+documentation = "https://dioxuslabs.com"
+keywords = ["dom", "ui", "gui", "react"]
+
+[dependencies]
+# rand = "0.8.5"
+# dioxus-core = { path = "../core", version = "^0.3.0", optional = true }
+
+dioxus = { path = "../dioxus", version = "^0.3.0" }
+tokio = { version = "*", features = ["full"] }
+dioxus-native-core = { path = "../native-core", features = ["dioxus"] }
+dioxus-native-core-macro = { path = "../native-core-macro" }
+
+shipyard = { version = "0.6.2", features = ["proc", "std"], default-features = false }
+
+[features]
+default = []
+# dioxus = ["dioxus-core"]
+parallel = ["shipyard/parallel"]
