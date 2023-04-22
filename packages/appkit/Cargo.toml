@@ -20,6 +20,11 @@ dioxus-native-core-macro = { path = "../native-core-macro" }
 
 shipyard = { version = "0.6.2", features = ["proc", "std"], default-features = false }
 
+cacao = { version = "0.3.2", features = ["appkit"] }
+
+# [build-dependencies]
+# bindgen = { version = "0.54.1", default-features = false}
+
 [features]
 default = []
 # dioxus = ["dioxus-core"]
